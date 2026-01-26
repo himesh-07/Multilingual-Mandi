@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif, Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #2943b8 0%, #bc7aff 100%);
+    min-height: 100vh;
+}
+
+.navbar {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+}
+
+.nav-brand h1 {
+    color: #4a5568;
+    font-size: 1.8rem;
+    margin-bottom: 0.2rem;
+}
+
+.nav-brand p {
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-btn {
+    background: transparent;
+    border: 2px solid #667eea;
+    color: #667eea;
+    padding: 0.5rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.nav-btn:hover,
+.nav-btn.active {
+    background: #667eea;
+    color: white;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.section {
+    display: none;
+    min-height: calc(100vh - 100px);
+}
+
+.section.active {
+    display: block;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.filters {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.filters select {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 25px;
+    background: white;
+    color: #4a5568;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.product-card {
+    background: white;
+    border-radius: 15px;
+    padding: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card h3 {
+    color: #4a5568;
+    margin-bottom: 0.5rem;
+}
+
+.product-card p {
+    color: #718096;
+    margin-bottom: 1rem;
+}
+
+.price-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+}
+
+.original-price {
+    text-decoration: line-through;
+    color: #a0aec0;
+}
+
+.fair-price {
+    color: #48bb78;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.vendor-forms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.form-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.form-card h3 {
+    color: #4a5568;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+.form-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-card input,
+.form-card select,
+.form-card textarea {
+    padding: 0.75rem;
+    border: 2px solid #e2e8f0;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-card input:focus,
+.form-card select:focus,
+.form-card textarea:focus {
+    outline: none;
+    border-color: #667eea;
+}
+
+.form-card button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.form-card button:hover {
+    background: #5a67d8;
+}
+
+.price-result {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f7fafc;
+    border-radius: 8px;
+    border-left: 4px solid #48bb78;
+}
+
+.chat-container {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chat-header {
+    background: #667eea;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
+.chat-header input,
+.chat-header select {
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+    flex: 1;
+}
+
+.chat-header button {
+    background: white;
+    color: #667eea;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #f8f9fa;
+}
+
+.message {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border-radius: 10px;
+    max-width: 70%;
+}
+
+.message.own {
+    background: #667eea;
+    color: white;
+    margin-left: auto;
+}
+
+.message.other {
+    background: white;
+    border: 1px solid #e2e8f0;
+}
+
+.message-info {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin-bottom: 0.25rem;
+}
+
+.chat-input {
+    padding: 1rem;
+    display: flex;
+    gap: 1rem;
+    border-top: 1px solid #e2e8f0;
+}
+
+.chat-input input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 25px;
+    outline: none;
+}
+
+.chat-input button {
+    background: #667eea;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .vendor-forms {
+        grid-template-columns: 1fr;
+    }
+    
+    .filters {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .chat-header {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}

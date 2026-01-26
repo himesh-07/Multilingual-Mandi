@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mandi connect</title>
+    <link rel="shortcut  icon" href="https://png.pngtree.com/png-vector/20220530/ourmid/pngtree-paddy-icon-design-bowl-gold-vector-png-image_46566748.jpg" type="">
+    <link rel="stylesheet" href="styles.css">
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-brand">
+                <h1>🌾 Mandi Connect </h1>
+                <p>Empowering Local Vendors with AI-Driven Fair Trade</p>
+            </div>
+            <div class="nav-links">
+                <button onclick="showSection('marketplace')" class="nav-btn active">Marketplace</button>
+                <button onclick="showSection('vendor')" class="nav-btn">Vendor Portal</button>
+                <button onclick="showSection('chat')" class="nav-btn">Live Chat</button>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Marketplace Section -->
+        <section id="marketplace" class="section active">
+            <div class="container">
+                <h2>Global Marketplace</h2>
+                <div class="filters">
+                    <select id="languageFilter">
+                        <option value="en">English</option>
+                        <option value="hi">हिंदी</option>
+                        <option value="es">Español</option>
+                        <option value="fr">Français</option>
+                    </select>
+                    <select id="categoryFilter">
+                        <option value="">All Categories</option>
+                        <option value="handicrafts">Handicrafts</option>
+                        <option value="textiles">Textiles</option>
+                        <option value="food">Food Products</option>
+                        <option value="jewelry">Jewelry</option>
+                    </select>
+                </div>
+                <div id="productGrid" class="product-grid">
+                    <!-- Products will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Vendor Portal Section -->
+        <section id="vendor" class="section">
+            <div class="container">
+                <h2>Vendor Portal</h2>
+                <div class="vendor-forms">
+                    <div class="form-card">
+                        <h3>Register as Vendor</h3>
+                        <form id="vendorForm">
+                            <input type="text" id="vendorName" placeholder="Vendor Name" required>
+                            <input type="text" id="vendorLocation" placeholder="Location" required>
+                            <select id="vendorLanguage" required>
+                                <option value="">Select Language</option>
+                                <option value="en">English</option>
+                                <option value="hi">हिंदी</option>
+                                <option value="es">Español</option>
+                                <option value="fr">Français</option>
+                            </select>
+                            <select id="vendorRegion" required>
+                                <option value="">Select Region Type</option>
+                                <option value="rural">Rural</option>
+                                <option value="urban">Urban</option>
+                                <option value="remote">Remote</option>
+                            </select>
+                            <button type="submit">Register</button>
+                        </form>
+                    </div>
+                    
+                    <div class="form-card">
+                        <h3>Add Product</h3>
+                        <form id="productForm">
+                            <input type="text" id="productName" placeholder="Product Name" required>
+                            <textarea id="productDescription" placeholder="Product Description" required></textarea>
+                            <input type="number" id="productPrice" placeholder="Base Price" step="0.01" required>
+                            <select id="productCategory" required>
+                                <option value="">Select Category</option>
+                                <option value="handicrafts">Handicrafts</option>
+                                <option value="textiles">Textiles</option>
+                                <option value="food">Food Products</option>
+                                <option value="jewelry">Jewelry</option>
+                            </select>
+                            <input type="text" id="productVendor" placeholder="Vendor ID" required>
+                            <button type="submit">Add Product</button>
+                        </form>
+                        <div id="fairPriceResult" class="price-result"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chat Section -->
+        <section id="chat" class="section">
+            <div class="container">
+                <h2>Live Translation Chat</h2>
+                <div class="chat-container">
+                    <div class="chat-header">
+                        <input type="text" id="roomId" placeholder="Enter Room ID" value="general">
+                        <button onclick="joinRoom()">Join Room</button>
+                        <select id="chatLanguage">
+                            <option value="en">English</option>
+                            <option value="hi">हिंदी</option>
+                            <option value="es">Español</option>
+                            <option value="fr">Français</option>
+                        </select>
+                    </div>
+                    <div id="chatMessages" class="chat-messages">
+                        <!-- Messages will appear here -->
+                    </div>
+                    <div class="chat-input">
+                        <input type="text" id="messageInput" placeholder="Type your message...">
+                        <button onclick="sendMessage()">Send</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
