@@ -13,7 +13,7 @@ A real-time linguistic and pricing bridge that empowers local vendors with AI-dr
 ## Quick Start
 
 1. Install dependencies:
-```bash
+2. ```bash
 npm install
 ```
 
@@ -33,29 +33,29 @@ npm run dev
 4. The system automatically calculates fair prices based on your region and product category
 
 ### For Buyers
-1. Browse the "Marketplace" section
+1. Browse the "Marketplace" section.
 2. Filter products by language and category
 3. Contact vendors directly through the live chat
 4. Messages are automatically translated between languages
 
 ### Live Chat
 - Join chat rooms to communicate with vendors
-- Select your preferred language
+- Select your preferred language.
 - Messages are automatically translated for all participants
 
 ## Technology Stack
 
 - **Backend**: Node.js, Express.js, Socket.IO
-- **Frontend**: Vanilla JavaScript, HTML5, CSS3
+- **Frontend**: Vanilla JavaScript, HTML5, CSS3 , React .
 - **Real-time Communication**: WebSockets
 - **Translation**: Mock API (ready for Google Translate integration)
 
 ## Fair Pricing Algorithm
 
 The platform uses a multi-factor algorithm to ensure fair compensation:
-- Base price set by vendor
+- Base price set by vendor.
 - Regional multiplier (rural areas get higher margins)
-- Category-specific adjustments
+- Category-specific adjustments.
 - Fair trade markup to support local communities
 
 ## Future Enhancements
