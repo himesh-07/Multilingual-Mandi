@@ -32,7 +32,7 @@ npm run dev
 3. Add products with base pricing
 4. The system automatically calculates fair prices based on your region and product category
 
-### For Buyers
+#### For Buyers
 1. Browse the "Marketplace" section.
 2. Filter products by language and category
 3. Contact vendors directly through the live chat
