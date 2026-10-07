@@ -39,7 +39,7 @@ npm run dev
 4. Messages are automatically translated between languages
 
 ### Live Chat
-- Join chat rooms to communicate with vendors
+- Join chat rooms to communicate with vendors .
 - Select your preferred language.
 - Messages are automatically translated for all participants
 
