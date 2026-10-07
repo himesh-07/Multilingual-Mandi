@@ -14,7 +14,7 @@ A real-time linguistic and pricing bridge that empowers local vendors with AI-dr
 
 1. Install dependencies:
 2. ```bash
-npm install
+npm install.
 ```
 
 2. Start the development server:
