@@ -2,7 +2,7 @@
 
 A real-time linguistic and pricing bridge that empowers local vendors with AI-driven fair trade.
 
-## Features 
+## Features 🚀
 
 - **Multilingual Support**: Real-time translation for vendor-buyer communication
 - **Fair Pricing Algorithm**: AI-driven pricing that ensures fair compensation for vendors
