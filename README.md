@@ -26,7 +26,7 @@ npm run dev
 
 ## Usage
 
-### For Vendors
+### For Vendors 🤝
 1. Go to the "Vendor Portal" section
 2. Register as a vendor with your location and language
 3. Add products with base pricing
