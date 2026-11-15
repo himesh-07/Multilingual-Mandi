@@ -10,7 +10,7 @@ A real-time linguistic and pricing bridge that empowers local vendors with AI-dr
 - **Vendor Portal**: Easy registration and product management
 - **Global Marketplace**: Browse products from local vendors worldwide
 
-## Quick Start
+## Quick Start 🤖
 
 1. Install dependencies:
 2. ```bash
