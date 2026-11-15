@@ -2,7 +2,7 @@
 
 A real-time linguistic and pricing bridge that empowers local vendors with AI-driven fair trade.
 
-## Features
+## Features 
 
 - **Multilingual Support**: Real-time translation for vendor-buyer communication
 - **Fair Pricing Algorithm**: AI-driven pricing that ensures fair compensation for vendors
@@ -38,12 +38,12 @@ npm run dev
 3. Contact vendors directly through the live chat
 4. Messages are automatically translated between languages
 
-### Live Chat
+### Live Chat Option 
 - Join chat rooms to communicate with vendors
 - Select your preferred language.
 - Messages are automatically translated for all participants
 
-## Technology Stack
+## Technology Stack ⚙️
 
 - **Backend**: Node.js, Express.js, Socket.IO
 - **Frontend**: Vanilla JavaScript, HTML5, CSS3 , React .
